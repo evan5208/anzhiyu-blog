@@ -13,7 +13,7 @@ menu:
 
 # nav相关配置
 nav:
-  enable: true
+  enable: false
   travelling: false
   clock: false
   menu:
@@ -22,11 +22,6 @@ nav:
         - name: 博客
           link: /
           icon: https://github.com/evan5208.png
-    - title: 项目
-      item:
-        - name: GitHub
-          link: https://github.com/evan5208/anzhiyu-blog
-          icon: https://github.githubassets.com/favicons/favicon.svg
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -471,7 +466,7 @@ footer:
       #   icon: anzhiyu-icon-copyright-line
   list:
     enable: true
-    randomFriends: 3
+    randomFriends: 0
     project:
       - title: 资讯
         links:
@@ -481,25 +476,13 @@ footer:
             link: /categories/
           - title: 标签
             link: /tags/
-      - title: 工具
-        links:
-          - title: Hexo
-            link: https://hexo.io/
-          - title: GitHub Pages
-            link: https://pages.github.com/
-      - title: 项目
-        links:
-          - title: 博客仓库
-            link: https://github.com/evan5208/anzhiyu-blog
   footerBar:
-    enable: true
+    enable: false
     authorLink: /
     cc:
       enable: false
       link: /copyright
-    linkList:
-      - link: https://github.com/evan5208/anzhiyu-blog
-        text: 源码
+    linkList: []
       # - link: https://image.anheyu.com
       #   text: 图床
       # - link: https://beian.miit.gov.cn/
@@ -610,7 +593,7 @@ sidebar:
   menus_items: true
   tags_cloud: true
   display_mode: true
-  nav_menu_project: true
+  nav_menu_project: false
 
 # 文章h2添加分隔线
 h2Divider: false
@@ -783,7 +766,7 @@ aside:
 
   card_announcement:
     enable: true
-    content: 博客已接入 GitHub Pages 自动部署。
+    content: 博客持续更新中。
   card_weixin:
     enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
