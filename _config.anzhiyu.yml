@@ -1020,7 +1020,7 @@ home_top:
   enable: true # 开关
   timemode: date #date/updated
   title: AI 工具观察
-  subTitle: 每小时从 X 推荐里捞干货
+  subTitle: X 推荐精选
   siteText: Evan Blog
   category:
     - name: AI工具
