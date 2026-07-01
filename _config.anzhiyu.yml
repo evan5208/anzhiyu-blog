@@ -136,7 +136,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: "background: url(https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1800&q=80) center / cover no-repeat"
+index_img: false
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: false
@@ -419,23 +419,17 @@ footer:
     since: 2026
   custom_text:
   runtime:
-    enable: true
+    enable: false
     launch_time: 07/01/2026 00:00:00 # 网站上线时间
-    work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
+    work_img:
     work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
+    offduty_img:
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
-    enable: true
-    list:
-      - link: https://hexo.io/ #徽标指向网站链接
-        shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
-        message: 博客框架为 Hexo
-      - link: https://hexo.anheyu.com/
-        shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
-        message: 本站使用AnZhiYu主题
+    enable: false
+    list: []
       # - link: https://www.dogecloud.com/
       #   shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg
       #   message: 本站使用多吉云为静态资源提供CDN加速
@@ -490,16 +484,12 @@ footer:
         links:
           - title: Hexo
             link: https://hexo.io/
-          - title: AnZhiYu 文档
-            link: https://docs.anheyu.com/
           - title: GitHub Pages
             link: https://pages.github.com/
       - title: 项目
         links:
           - title: 博客仓库
             link: https://github.com/evan5208/anzhiyu-blog
-          - title: 主题源码
-            link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
   footerBar:
     enable: true
     authorLink: /
@@ -507,8 +497,6 @@ footer:
       enable: false
       link: /copyright
     linkList:
-      - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
-        text: 主题
       - link: https://github.com/evan5208/anzhiyu-blog
         text: 源码
       # - link: https://image.anheyu.com
@@ -815,8 +803,8 @@ aside:
     color: false
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
-      - Hexo
-      - AnZhiYu
+      - AI 工具
+      - X 推荐
   card_archives:
     enable: true
     type: monthly # yearly or monthly
@@ -1029,7 +1017,7 @@ css_prefix: true
 
 # 首页顶部相关配置
 home_top:
-  enable: true # 开关
+  enable: false # 开关
   timemode: date #date/updated
   title: 鲜艳的红领巾
   subTitle: 飘扬在前胸~
@@ -1079,7 +1067,7 @@ bubble:
 
 #  控制台打印信息
 console:
-  enable: true
+  enable: false
 
 # 51a统计配置
 LA:
@@ -1165,7 +1153,7 @@ greetingBox:
 # 文章顶部ai摘要
 post_head_ai_description:
   enable: false
-  gptName: AnZhiYu
+  gptName: Evan
   mode: local # 默认模式 可选值: tianli/local
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
   btnLink: https://afdian.net/item/886a79d4db6711eda42a52540025c377
