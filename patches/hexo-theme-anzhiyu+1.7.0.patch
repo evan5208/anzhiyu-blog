@@ -1,0 +1,127 @@
+diff --git a/node_modules/hexo-theme-anzhiyu/layout/category.pug b/node_modules/hexo-theme-anzhiyu/layout/category.pug
+index 7bf34da..b65a024 100644
+--- a/node_modules/hexo-theme-anzhiyu/layout/category.pug
++++ b/node_modules/hexo-theme-anzhiyu/layout/category.pug
+@@ -13,11 +13,11 @@ block content
+         i.anzhiyufont.anzhiyu-icon-shapes
+         #catalog-list
+           .catalog-list-item
+-            a(href="/") 首页
++            a(href=url_for('/')) 首页
+           !=catalog_list("categories")
+         .category-bar-next#category-bar-next(onclick="anzhiyu.scrollCategoryBarToRight()")
+           i.anzhiyufont.anzhiyu-icon-angle-double-right
+-        a.catalog-more(href="/categories/")!= '更多'
++        a.catalog-more(href=url_for('/categories/'))!= '更多'
+       .article-sort-title= _p('page.category') + ' - ' + page.category
+       +articleSort(page.posts, page.current)
+       include includes/pagination.pug
+diff --git a/node_modules/hexo-theme-anzhiyu/layout/includes/anzhiyu/rightmenu.pug b/node_modules/hexo-theme-anzhiyu/layout/includes/anzhiyu/rightmenu.pug
+index 48bcafe..d212aad 100644
+--- a/node_modules/hexo-theme-anzhiyu/layout/includes/anzhiyu/rightmenu.pug
++++ b/node_modules/hexo-theme-anzhiyu/layout/includes/anzhiyu/rightmenu.pug
+@@ -60,10 +60,10 @@
+ 		a.rightMenu-item.menu-link#menu-randomPost
+ 			i.anzhiyufont.anzhiyu-icon-shuffle
+ 			span 随便逛逛
+-		a.rightMenu-item.menu-link(href='/categories/')
++		a.rightMenu-item.menu-link(href=url_for('/categories/'))
+ 			i.anzhiyufont.anzhiyu-icon-cube
+ 			span 博客分类
+-		a.rightMenu-item.menu-link(href='/tags/')
++		a.rightMenu-item.menu-link(href=url_for('/tags/'))
+ 			i.anzhiyufont.anzhiyu-icon-tags
+ 			span 文章标签
+ 	.rightMenu-group.rightMenu-line.rightMenuOther
+diff --git a/node_modules/hexo-theme-anzhiyu/layout/includes/categoryGroup.pug b/node_modules/hexo-theme-anzhiyu/layout/includes/categoryGroup.pug
+index 263c042..d4b5268 100644
+--- a/node_modules/hexo-theme-anzhiyu/layout/includes/categoryGroup.pug
++++ b/node_modules/hexo-theme-anzhiyu/layout/includes/categoryGroup.pug
+@@ -3,8 +3,8 @@
+       #catalog-bar
+         #catalog-list
+           .catalog-list-item(id='首页')
+-            a(href="/") 首页
++            a(href=url_for('/')) 首页
+           !=catalog_list("categories")
+         .category-bar-next#category-bar-next(onclick="anzhiyu.scrollCategoryBarToRight()")
+           i.anzhiyufont.anzhiyu-icon-angle-double-right
+-        a.catalog-more(href="/categories/")!= '更多'
++        a.catalog-more(href=url_for('/categories/'))!= '更多'
+diff --git a/node_modules/hexo-theme-anzhiyu/layout/includes/page/flink.pug b/node_modules/hexo-theme-anzhiyu/layout/includes/page/flink.pug
+index b3a2fbf..94f8b97 100644
+--- a/node_modules/hexo-theme-anzhiyu/layout/includes/page/flink.pug
++++ b/node_modules/hexo-theme-anzhiyu/layout/includes/page/flink.pug
+@@ -43,7 +43,7 @@
+         a.random-post-start.no-text-decoration(href='javascript:fetchRandomPost();')
+           i.anzhiyufont.anzhiyu-icon-arrow-rotate-right
+       .title-h2-a-right
+-        a.random-post-all.no-text-decoration(href='/link/') 全部友链
++        a.random-post-all.no-text-decoration(href=url_for('/link/')) 全部友链
+     #random-post
+     script(defer data-pjax src=url_for(theme.asset.random_friends_post_js))
+   
+diff --git a/node_modules/hexo-theme-anzhiyu/scripts/helpers/catalog_list.js b/node_modules/hexo-theme-anzhiyu/scripts/helpers/catalog_list.js
+index 72e7bc1..1b37aba 100644
+--- a/node_modules/hexo-theme-anzhiyu/scripts/helpers/catalog_list.js
++++ b/node_modules/hexo-theme-anzhiyu/scripts/helpers/catalog_list.js
+@@ -1,9 +1,10 @@
+ hexo.extend.helper.register("catalog_list", function (type) {
+   let html = ``;
++  const root = hexo.config.root || "/";
+   hexo.locals.get(type).map(function (item) {
+     html += `
+-    <div class="catalog-list-item" id="/${item.path}">
+-      <a href="/${item.path}">
++    <div class="catalog-list-item" id="${root}${item.path}">
++      <a href="${root}${item.path}">
+         ${item.name}
+       </a>
+     </div>
+diff --git a/node_modules/hexo-theme-anzhiyu/scripts/helpers/random.js b/node_modules/hexo-theme-anzhiyu/scripts/helpers/random.js
+index 549747d..76f2962 100644
+--- a/node_modules/hexo-theme-anzhiyu/scripts/helpers/random.js
++++ b/node_modules/hexo-theme-anzhiyu/scripts/helpers/random.js
+@@ -2,6 +2,7 @@ hexo.extend.generator.register("random", function (locals) {
+   const config = hexo.config.random || {};
+   const themeConfig = hexo.theme.config;
+   const pjaxEn = themeConfig.pjax.enable;
++  const root = hexo.config.root || "/";
+   const randomNumberFriend = themeConfig.footer.list.randomFriends || 0;
+   const posts = [];
+   const link = locals.data.link || [];
+@@ -20,7 +21,8 @@ hexo.extend.generator.register("random", function (locals) {
+   let result = `var posts=${JSON.stringify(
+     posts
+   )};function toRandomPost(){
+-    ${pjaxEn ? "pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);" : "window.location.href='/'+posts[Math.floor(Math.random() * posts.length)];"}
++    const root=${JSON.stringify(root)};
++    ${pjaxEn ? "pjax.loadUrl(root+posts[Math.floor(Math.random() * posts.length)]);" : "window.location.href=root+posts[Math.floor(Math.random() * posts.length)];"}
+   };`;
+ 
+   if (themeConfig.footer.list.enable && randomNumberFriend > 0) {
+@@ -70,7 +72,7 @@ hexo.extend.generator.register("random", function (locals) {
+         })
+         .join("");
+   
+-      html += "<a class='footer-item' href='/link/'>更多</a>";
++      html += "<a class='footer-item' href='" + ${JSON.stringify(root)} + "link/'>更多</a>";
+ 
+       document.getElementById("friend-links-in-footer").innerHTML = html;
+ 
+diff --git a/node_modules/hexo-theme-anzhiyu/scripts/helpers/tags_page_list.js b/node_modules/hexo-theme-anzhiyu/scripts/helpers/tags_page_list.js
+index 4adc22e..9ccf4d6 100644
+--- a/node_modules/hexo-theme-anzhiyu/scripts/helpers/tags_page_list.js
++++ b/node_modules/hexo-theme-anzhiyu/scripts/helpers/tags_page_list.js
+@@ -13,9 +13,10 @@ hexo.extend.helper.register('tags_page_list', function (type) {
+   }, []);
+ 
+   let html = ``;
++  const root = hexo.config.root || "/";
+   sortedTags.forEach(function (item) {
+     html += `
+-      <a href="/${item.path}" id="/${item.path}">
++      <a href="${root}${item.path}" id="${root}${item.path}">
+         <span class="tags-punctuation">#</span>${item.name}
+         <span class="tagsPageCount">${item.length}</span>
+       </a>

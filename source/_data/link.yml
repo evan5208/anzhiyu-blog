@@ -1,0 +1,12 @@
+- class_name: 推荐站点
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/
+      avatar: https://hexo.io/icon/favicon-196x196.png
+      descr: 快速、简单且强大的博客框架
+    - name: AnZhiYu
+      link: https://docs.anheyu.com/
+      avatar: https://github.com/anzhiyu-c.png
+      descr: 当前博客使用的 Hexo 主题
