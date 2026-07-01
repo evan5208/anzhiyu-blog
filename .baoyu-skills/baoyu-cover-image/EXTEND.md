@@ -8,7 +8,7 @@ watermark:
 preferred_type: scene
 preferred_palette: macaron
 preferred_rendering: hand-drawn
-preferred_text: none
+preferred_text: title-only
 preferred_mood: balanced
 default_aspect: "16:9"
 default_output_dir: same-dir
