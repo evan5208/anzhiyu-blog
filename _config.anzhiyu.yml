@@ -1019,21 +1019,21 @@ css_prefix: true
 home_top:
   enable: true # 开关
   timemode: date #date/updated
-  title: 鲜艳的红领巾
-  subTitle: 飘扬在前胸~
-  siteText: CMLiussss.com
+  title: AI 工具观察
+  subTitle: 每小时从 X 推荐里捞干货
+  siteText: Evan Blog
   category:
-    - name: 建站
-      path: /categories/建站记录/
+    - name: AI工具
+      path: /categories/工具推荐/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 文章
+    - name: 全部文章
       path: /archives/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
-    - name: 标签
+    - name: 标签索引
       path: /tags/
       shadow: var(--anzhiyu-shadow-green)
       class: green
@@ -1044,10 +1044,10 @@ home_top:
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 部署记录
-    title: GitHub Pages
-    image: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1200&q=80
-    link: https://pages.github.com/
+    tips: 今日精选
+    title: X 推荐工具池
+    image: /img/posts/ifixai-agent-diagnostic/cover.png
+    link: /categories/工具推荐/
 
 # 朋友圈配置
 friends_vue:
