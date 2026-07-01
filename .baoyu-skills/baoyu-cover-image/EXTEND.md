@@ -5,10 +5,10 @@ watermark:
   content: ""
   position: bottom-right
   opacity: 0.7
-preferred_type: null
-preferred_palette: null
-preferred_rendering: null
-preferred_text: title-only
+preferred_type: scene
+preferred_palette: macaron
+preferred_rendering: hand-drawn
+preferred_text: none
 preferred_mood: balanced
 default_aspect: "16:9"
 default_output_dir: same-dir
