@@ -1,0 +1,137 @@
+/* Terminal-style code blocks */
+#article-container figure.highlight {
+  overflow: hidden;
+  margin: 1.25rem 0 1.75rem;
+  border: 0;
+  border-radius: 14px;
+  background: #202020;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.26);
+  color: #e8f5f2;
+}
+
+#article-container figure.highlight .highlight-tools {
+  height: 58px;
+  min-height: 58px;
+  border: 0;
+  border-bottom: 1px solid #262626;
+  background: #1b1b1b;
+  color: #cdd8d8;
+}
+
+#article-container figure.highlight .highlight-tools::before {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 24px 0 #ffbd2e, 48px 0 #28c840;
+  content: "";
+  transform: translateY(-50%);
+}
+
+#article-container figure.highlight .highlight-tools .code-lang {
+  left: 96px;
+  color: #d3dddd;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#article-container figure.highlight .highlight-tools .copy-notice {
+  right: 4.2rem;
+  color: #d3dddd;
+  font-weight: 700;
+}
+
+#article-container figure.highlight .highlight-tools .copy-button {
+  right: 44px;
+  color: #cfd8d8;
+  font-size: 1.35rem;
+}
+
+#article-container figure.highlight .highlight-tools .copy-button:hover {
+  color: #ffffff;
+}
+
+#article-container figure.highlight .highlight-tools .expand {
+  right: 16px;
+  color: #cfd8d8;
+  font-size: 1.2rem;
+}
+
+#article-container figure.highlight table {
+  margin: 0;
+  border: 0;
+  background: #202020;
+}
+
+#article-container figure.highlight tr,
+#article-container figure.highlight td {
+  border: 0;
+  background: transparent;
+}
+
+#article-container figure.highlight pre {
+  padding: 16px 0;
+  background: transparent;
+  color: #e8f5f2;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+#article-container figure.highlight .gutter {
+  width: 64px;
+  background: #202020 !important;
+  color: #8c9698 !important;
+  text-align: center;
+}
+
+#article-container figure.highlight .gutter pre {
+  padding-left: 0;
+  padding-right: 0;
+  background: #202020 !important;
+  color: #8c9698 !important;
+}
+
+#article-container figure.highlight .gutter .line {
+  background: #202020 !important;
+  color: #8c9698 !important;
+}
+
+#article-container figure.highlight .code pre {
+  padding-right: 24px;
+}
+
+#article-container figure.highlight .line {
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  #article-container figure.highlight {
+    border-radius: 12px;
+  }
+
+  #article-container figure.highlight .highlight-tools {
+    height: 48px;
+    min-height: 48px;
+  }
+
+  #article-container figure.highlight .highlight-tools::before {
+    left: 18px;
+    width: 11px;
+    height: 11px;
+    box-shadow: 19px 0 #ffbd2e, 38px 0 #28c840;
+  }
+
+  #article-container figure.highlight .highlight-tools .code-lang {
+    left: 72px;
+    font-size: 1rem;
+  }
+
+  #article-container figure.highlight .gutter {
+    width: 44px;
+  }
+}
