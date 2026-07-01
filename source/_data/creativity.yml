@@ -1,0 +1,49 @@
+- creativity_list:
+    - name: Java
+      icon: https://bu.dusays.com/2023/04/09/643293b1184e9.jpg
+      color: "#fff"
+    - name: Docker
+      icon: https://bu.dusays.com/2023/04/09/643293b0f0abe.png
+      color: "#57b6e6"
+    - name: Photoshop
+      icon: https://bu.dusays.com/2022/12/15/639aa3a5c240e.png
+      color: "#4082c3"
+    - name: Node
+      icon: https://npm.elemecdn.com/anzhiyu-blog@2.1.1/img/svg/node-logo.svg
+      color: "#333"
+    - name: Webpack
+      icon: https://bu.dusays.com/2023/04/09/643293b68026c.png
+      color: "#2e3a41"
+    - name: Pinia
+      icon: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/pinia-logo.svg
+      color: "#fff"
+    - name: Python
+      icon: https://bu.dusays.com/2023/04/09/643293b1230f7.png
+      color: "#fff"
+    - name: Vite
+      icon: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/vite-logo.svg
+      color: "#937df7"
+    - name: Flutter
+      icon: https://bu.dusays.com/2023/04/09/643293b1055c2.png
+      color: "#4499e4"
+    - name: Vue
+      icon: https://bu.dusays.com/2023/04/09/643293b6788bd.png
+      color: "#b8f0ae"
+    - name: React
+      icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K
+      color: "#222"
+    - name: CSS3
+      icon: https://bu.dusays.com/2022/12/15/639aa3a5c251e.png
+      color: "#2c51db"
+    - name: JS
+      icon: https://bu.dusays.com/2023/04/09/643293b121f02.png
+      color: "#f7cb4f"
+    - name: HTML
+      icon: https://bu.dusays.com/2022/12/15/639aa3a5c241c.png
+      color: "#e9572b"
+    - name: Git
+      icon: https://bu.dusays.com/2023/04/09/643293b10ccdd.webp
+      color: "#df5b40"
+    - name: Apifox
+      icon: https://bu.dusays.com/2022/11/19/6378d6458c6b6.png
+      color: "#e65164"
