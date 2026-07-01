@@ -3,6 +3,7 @@ menu:
     全部文章: /archives/ || anzhiyu-icon-box-archive
     文章分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
+    脚本汇总: /p/bash/ || anzhiyu-icon-paper-plane
   推荐REC:
     建站记录: /categories/建站记录/ || anzhiyu-icon-paper-plane
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
