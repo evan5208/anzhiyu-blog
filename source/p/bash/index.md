@@ -1,5 +1,5 @@
 ---
-title: 脚本汇总
+title: 自用服务器脚本大全：一键测评、工具与部署指南
 date: 2026-07-01 21:00:00
 updated: 2026-07-01 21:00:00
 description: 常用 VPS 测评、工具安装、服务部署和 DD 重装脚本备忘。
@@ -9,15 +9,9 @@ toc: true
 top_img: false
 ---
 
-这里整理一些常用服务器脚本，主要用于个人备忘和临时排查。
-
-> 运行一键脚本前，建议先看脚本源码和项目说明。尤其是 DD 重装、网络代理、面板安装类脚本，可能会修改系统、防火墙、SSH、网络和磁盘数据。请先在测试机验证，风险自担。
-
-参考来源：[CMLiussss Blog 脚本汇总](https://vercel.blog.cmliussss.com/p/bash/)
-
 ## 自用常用脚本汇总
 
-新机器先补齐常用工具：
+主要是 **自用备忘**，不要当成推荐表单，使用后果自负！
 
 ```shell
 apt update && apt install -y sudo curl unzip
@@ -29,20 +23,17 @@ apt update && apt install -y sudo curl unzip
 
 ### [IP质量体检脚本](https://github.com/xykt/IPQuality)
 
-
 ```shell
 bash <(curl -Ls IP.Check.Place)
 ```
 
 ### [VPS融合怪服务器测评脚本](https://github.com/spiritLHLS/ecs)
 
-
 ```shell
 curl -L https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh -m 1
 ```
 
 ### [检测VPS内存是否超售的一键脚本](https://github.com/uselibrary/memoryCheck)
-
 
 ```shell
 curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
@@ -54,13 +45,11 @@ curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.s
 
 ### [vps一键脚本工具](https://github.com/eooce/ssh_tool)
 
-
 ```shell
 bash <(curl -fsSL ssh_tool.eooce.com)
 ```
 
 ### [gost安装脚本](https://github.com/go-gost/gost)
-
 
 ```shell
 bash <(curl -fsSL https://github.com/go-gost/gost/raw/master/install.sh) --install
@@ -72,13 +61,11 @@ bash <(curl -fsSL https://github.com/go-gost/gost/raw/master/install.sh) --insta
 
 ### [xeefei/3x-ui](https://github.com/xeefei/3x-ui)
 
-
 ```shell
 bash <(curl -Ls https://raw.githubusercontent.com/xeefei/3x-ui/master/install.sh)
 ```
 
 ### [甬哥Sing-box精装桶](https://github.com/yonggekkk/sing-box_hysteria2_tuic_argo_reality)
-
 
 ```shell
 bash <(curl -Ls https://gitlab.com/rwkgyg/sing-box-yg/raw/main/sb.sh)
@@ -89,9 +76,6 @@ bash <(curl -Ls https://gitlab.com/rwkgyg/sing-box-yg/raw/main/sb.sh)
 ## DD 重装
 
 ### [一键脚本](https://github.com/bin456789/reinstall)
-
-
-> 这类脚本会重装系统，可能清空数据或导致机器失联。运行前请先确认备份、救援模式、VNC / 串口控制台和登录方式。
 
 ```shell
 curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh && bash reinstall.sh
