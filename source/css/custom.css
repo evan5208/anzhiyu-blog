@@ -41,13 +41,25 @@
 }
 
 #article-container figure.highlight .highlight-tools .copy-notice {
-  right: 4.2rem;
+  right: 7rem;
   color: #d3dddd;
   font-weight: 700;
 }
 
+#article-container figure.highlight .highlight-tools .copy-button,
+#article-container figure.highlight .highlight-tools .expand {
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  transform: translateY(-50%) !important;
+}
+
 #article-container figure.highlight .highlight-tools .copy-button {
-  right: 44px;
+  right: 76px;
   color: #cfd8d8;
   font-size: 1.35rem;
 }
@@ -57,9 +69,22 @@
 }
 
 #article-container figure.highlight .highlight-tools .expand {
-  right: 16px;
+  right: 22px;
   color: #cfd8d8;
   font-size: 1.2rem;
+}
+
+#article-container figure.highlight .highlight-tools.closed .expand {
+  transform: translateY(-50%) rotate(-90deg) !important;
+}
+
+#article-container figure.highlight.bash .highlight-tools .code-lang {
+  font-size: 0;
+}
+
+#article-container figure.highlight.bash .highlight-tools .code-lang::after {
+  content: "SHELL";
+  font-size: 1.25rem;
 }
 
 #article-container figure.highlight table {
@@ -92,6 +117,7 @@
 #article-container figure.highlight .gutter pre {
   padding-left: 0;
   padding-right: 0;
+  border-right: 0 !important;
   background: #202020 !important;
   color: #8c9698 !important;
 }
@@ -103,6 +129,8 @@
 
 #article-container figure.highlight .code pre {
   padding-right: 24px;
+  padding-left: 14px;
+  border-left: 0 !important;
 }
 
 #article-container figure.highlight .line {
@@ -129,6 +157,22 @@
   #article-container figure.highlight .highlight-tools .code-lang {
     left: 72px;
     font-size: 1rem;
+  }
+
+  #article-container figure.highlight.bash .highlight-tools .code-lang {
+    font-size: 0;
+  }
+
+  #article-container figure.highlight.bash .highlight-tools .code-lang::after {
+    font-size: 1rem;
+  }
+
+  #article-container figure.highlight .highlight-tools .copy-button {
+    right: 58px;
+  }
+
+  #article-container figure.highlight .highlight-tools .expand {
+    right: 14px;
   }
 
   #article-container figure.highlight .gutter {
