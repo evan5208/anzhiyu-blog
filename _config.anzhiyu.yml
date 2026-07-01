@@ -136,7 +136,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: "background: url(https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1800&q=80) center / cover no-repeat"
+index_img: false
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: false
@@ -1017,7 +1017,7 @@ css_prefix: true
 
 # 首页顶部相关配置
 home_top:
-  enable: false # 开关
+  enable: true # 开关
   timemode: date #date/updated
   title: 鲜艳的红领巾
   subTitle: 飘扬在前胸~
